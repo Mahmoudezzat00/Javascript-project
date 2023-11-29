@@ -1,0 +1,379 @@
+#container {
+  max-height: 90%;
+  max-width: 75%;
+  height: 90%;
+  width: 75%;
+  /*background-color: #A8F9FF;
+  */
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 5px;
+
+  margin: 0 auto;
+
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  z-index: 999;
+  object-fit: contain;
+  display: none;
+  grid-template-columns: 0.6fr 1.6fr 1fr;
+  grid-template-rows: 0.6fr 1.6fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "chillCat currentPlayer doneButton"
+    "player1Details gameField gameField"
+    "player2Details gameField gameField";
+}
+
+#container>* {
+  /*border-color: black;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 5px;
+*/
+font: 30px gaegu;
+}
+
+#gameField {
+
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  gap: 2px 2px;
+  grid-auto-flow: row;
+
+  grid-area: gameField;
+}
+
+
+#player1Details {
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Cat Cat"
+    "Cat Cat"
+    "catNum Timer"
+    "PlayerName playerScore1";
+  grid-area: player1Details;
+  border-bottom: 5px solid black;
+}
+
+#Cat {
+  grid-area: Cat;
+  display: grid;
+  padding: 0px 0px;
+  justify-items: center;
+  align-items: center;
+}
+
+#catNum {
+  grid-area: catNum;
+}
+
+#PlayerName {
+  grid-area: PlayerName;
+}
+
+#Timer {
+  grid-area: Timer;
+}
+
+#player2Details {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Cat2 Cat2"
+    "Cat2 Cat2"
+    "catNum2 Timer2"
+    "playerName2 playerScore2";
+  grid-area: player2Details;
+}
+
+#player2Timer{
+  font-family: "gaegu", Calibri;
+    font-size: 30px;
+}
+
+#player1Timer{
+  font-family: "gaegu", Calibri;
+    font-size: 30px;
+}
+
+#Cat2 {
+  grid-area: Cat2;
+  display: grid;
+  padding: 0px 0px;
+  justify-items: center;
+  align-items: center;
+}
+
+#catNum2 {
+  grid-area: catNum2;
+}
+
+#Timer2 {
+  grid-area: Timer2;
+}
+
+#playerName2 {
+  grid-area: playerName2;
+}
+
+#doneButton {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "DoneButton saveButton";
+  grid-area: doneButton;
+}
+
+#saveButton {
+  display: grid;
+  grid-area: saveButton;
+  justify-content: center;
+  align-items: center;
+}
+
+#DoneButton {
+    display: grid;
+  grid-area: DoneButton;
+  justify-content: center;
+    align-items: center;
+  
+}
+
+#currentPlayer {
+  display: grid;
+  grid-area: currentPlayer;
+  justify-content: center;
+  align-items: center;
+  text-justify: center;
+}
+
+#currentPlayerName {
+  justify-content: center;
+  align-items: center;
+  text-justify: center;
+}
+
+#chillCat {
+  grid-area: chillCat;
+}
+
+#catLogo,
+#catLogo2,
+#save,
+#nextTurn {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  padding: 0px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+#save,
+#nextTurn {
+  padding: 15px 15px 15px 15px;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copyCat {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  padding: 0px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+@keyframes fadein {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes fadeout {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+
+body {
+  background-color: black;
+}
+
+#animate {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  z-index: -1;
+}
+
+#load {
+  z-index: 99999;
+}
+
+#next1 {
+  color: black;
+  z-index: -1;
+  position: fixed;
+  top: 45%;
+  left: 10%;
+  padding: 15px 32px;
+
+}
+
+#next1:hover {
+  box-shadow: 00px 0px 35px 0px rgba(254, 254, 254, 0.40), 0 30px 80px 0 rgba(0, 0, 0, 0.19);
+  z-index: -1;
+}
+
+#next2 {
+  padding: 15px 32px;
+  color: black;
+}
+
+#next2:hover {
+  box-shadow: 00px 0px 35px 0px rgba(254, 254, 254, 0.40), 0 30px 80px 0 rgba(0, 0, 0, 0.19);
+  z-index: -1;
+}
+
+
+@font-face {
+  font-family: bubbly;
+  src: url('./font/autosquare/AutoSquare.otf');
+}
+
+@font-face {
+  font-family: gaegu;
+  src: url('./font/Gaegu/Gaegu-Light.ttf');
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#alert {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 20%;
+  width: 20%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+
+
+#alert h2 {
+  margin-top: 0;
+}
+
+text {
+  vertical-align: middle;
+  font-family: "gaegu", Calibri;
+  font-size: 30px;
+}
+
+#currentPlayerName {
+  font-size: 50px;
+}
+
+input {
+  vertical-align: middle;
+}
+
+* {
+  /*
+    to default the margins due to browser settings
+    */
+  margin: 0;
+  padding: 0;
+}
+
+/*
+display block to reset to default
+*/
+.p1 {
+  color: white;
+  font-family: "bubbly", Calibri;
+  font-size: 100px;
+  display: block;
+}
+
+
+.p2 {
+  color: rgb(0, 47, 91);
+  display: none;
+  font-family: "bubbly", Calibri;
+  font-size: 80px;
+  z-index: 999;
+  line-height: 0.8;
+}
+
+/*
+turn display to none to hide page 3
+ignore above
+change the container and grid field to display grid
+*/
+.p3 {
+  display: none;
+}
+
+.p4 {
+
+  display: none;
+}
+
+.p5 {
+  display: none;
+}

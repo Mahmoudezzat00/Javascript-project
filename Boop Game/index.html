@@ -1,0 +1,205 @@
+<!--Boop Game-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Boop Game!</title>
+  </head>
+  <body>
+    <div id="overlay" style="display: none">
+      <div id="alert">
+        <h2 id="alert-title"></h2>
+        <p id="alert-message"></p>
+        <button id="alert-button" onclick="hideAlert()">OK</button>
+        <button id="alert-button2" style="display: none" onclick="hideAlert()">
+          OK
+        </button>
+      </div>
+    </div>
+
+    <!--firstPage-->
+    <table
+      class="p1"
+      style="margin-left: 30px; margin-right: auto; height: 100%"
+    >
+      <tr>
+        <td class="p1" style="font-size: 200px; text-align: center">
+          <firstTitle style="position: fixed; top: 5%">Boop Game!</firstTitle>
+        </td>
+      </tr>
+      <tr>
+        <td class="p1" style="text-align: center"></td>
+      </tr>
+      <tr>
+        <td class="p1" align="center">
+          <button class="p1" id="next1">Boop!</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="p1" align="center" style="margin-top: 30px">
+          <img
+            id="load"
+            style="position: fixed; bottom: 0%; left: 0%"
+            src="./minimalist/homepageCropped.gif"
+            alt=""
+          />
+        </td>
+      </tr>
+    </table>
+
+    <!--secondPage -->
+    <table
+      class="p2"
+      style="margin-top: 100px; margin-left: 30px; margin-right: auto"
+    >
+      <tr>
+        <td
+          class="p2"
+          style="font-size: 70px; text-align: center; margin-bottom: 100px"
+        >
+          Enter the Game details:
+        </td>
+      </tr>
+      <tr style="display: inline">
+        <td class="p2" style="margin-bottom: 0.1px">
+          <text style="margin-left: 240px; font-size: 40px">Player 1</text>
+          <text style="margin-left: 160px; font-size: 40px">Player 2</text>
+        </td>
+        <td class="p2">
+          <input
+            style="margin-left: 180px; text-align: center; font-family: gaegu"
+            type="text"
+            id="player1"
+            placeholder="Player 1 (max 6 Char)"
+          />
+          <input
+            style="margin-left: 100px; text-align: center; font-family: gaegu"
+            type="text"
+            id="player2"
+            placeholder="Player 2 (max 6 Char)"
+          />
+        </td>
+      </tr>
+      <tr style="display: inline">
+        <td class="p2">
+          <text style="margin-bottom: 0; margin-left: 45px; font-size: 40px"
+            >PlayField size:</text
+          >
+          <text style="margin-bottom: 0; margin-left: 110px; font-size: 40px"
+            >#Cats each:</text
+          >
+          <text style="margin-bottom: 0; margin-left: 110px; font-size: 40px"
+            >Points to Win:</text
+          >
+        </td>
+        <td class="p2">
+          <input
+            min="6"
+            max="10"
+            style="margin-left: 50px; text-align: center; font-family: gaegu"
+            type="number"
+            id="playField"
+            placeholder="Min 4 Max 6"
+          />
+          <input
+            min="3"
+            max="10"
+            style="margin-left: 110px; text-align: center; font-family: gaegu"
+            type="number"
+            id="numCats"
+            placeholder="Min 3 Max 10"
+          />
+          <input
+            min="1"
+            max="5"
+            style="margin-left: 90px; text-align: center; font-family: gaegu"
+            type="number"
+            id="Points"
+            placeholder="Min 1 Max 5"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="p2" align="center" style="margin-top: 30px">
+          <button class="p2" id="next2">Boop!</button>
+        </td>
+      </tr>
+    </table>
+
+    <!--thirdpage-->
+    <!--default playfield, updated based on inputs from second page-->
+    <div class="p3" id="container">
+      <div id="gameField"></div>
+      <div id="player1Details">
+        <div title="Drag ME!" id="Cat">
+          <img
+            title="Drag ME!"
+            id="catLogo"
+            draggable="true"
+            ondragstart="drag(event)"
+            src="./minimalist/cat1.png"
+            alt=""
+          />
+        </div>
+        <div title="Number of Cats left" id="catNum">
+          <text id="player1numCats" title="Number of Cats left"></text>
+        </div>
+        <div title="Timer" id="Timer">
+          <text id="player1Timer" title="Timer"></text>
+        </div>
+        <div id="PlayerName">
+          <text id="player1Name"></text>
+        </div>
+        <div title="Score" id="playerScore1">
+          <text id="player1Score" title="Score"></text>
+        </div>
+      </div>
+      <div id="player2Details">
+        <div title="Drag ME!" id="Cat2">
+          <img
+            title="Drag ME!"
+            id="catLogo2"
+            draggable="true"
+            ondragstart="drag(event)"
+            src="./minimalist/cat2.png"
+            alt=""
+          />
+        </div>
+        <div title="Number of Cats Left" id="catNum2">
+          <text id="player2numCats" title="Number of Cats left"></text>
+        </div>
+        <div title="Timer" id="Timer2">
+          <text id="player2Timer" title="Timer"></text>
+        </div>
+        <div id="playerName2">
+          <text id="player2Name"></text>
+        </div>
+        <div title="Score" id="playerScore2">
+          <text id="player2Score" title="Score"></text>
+        </div>
+      </div>
+      <div id="doneButton">
+        <div id="saveButton">
+          <button id="save">Save</button>
+        </div>
+        <div id="DoneButton">
+          <button id="nextTurn">End Turn!</button>
+        </div>
+      </div>
+      <div id="currentPlayer">
+        <text id="currentPlayerName"></text>
+      </div>
+      <div id="chillCat"></div>
+    </div>
+
+    <!--Picture for all pages-->
+    <img id="animate" src="" alt="" />
+    <button style="display: none" id="next3">Boop!</button>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+<!-- sorry its late-->

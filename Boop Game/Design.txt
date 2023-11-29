@@ -1,0 +1,166 @@
+Need a table 6*6
+4 Designs of cats, for each player to choose one from
+next to the table on each side a stack of the left over cat tokens
+Each player starts with 8 on each side
+
+when cats are added all cats touching the location its placed are booped
+including diagonal, and can be pushed off the table
+when removed will return to owners cats
+
+they can be protected and will not be moved when they are two in the direction of the new cat added
+for example 
+1 2 3
+a cat is added in place of 1, where 2 and 3 are already occupied, then the cats in 2 and 3 won't move
+
+Additionally there is no cascad effect, so if a cat moves due to a new cat, and now its next to another cat, 
+that other cat doesn't move
+
+A point happens when three cats are next to each other, diagonally, vertically, or horizontally
+When that does happen, the 3 cats are removed and put to the side again
+A point can be obtained by the opponent by accident in turn of the current player
+
+2 possible scenarios for the game to end
+Either one of the players reach a set target of points
+or a player has all his cats on the board and therefore doesn't have any more moves to make, but can that one actually happen?
+
+its a 6x6 playfield, and each have 8, so there is 36 cells, yea I guess sounds feasible, possibly pretty hard, but nevertheless feasible
+
+Implementation:
+Single html page
+Center table of size 6*6
+
+Flow:
+Game starts animation
+choose player one name
+player two name
+random dice throw to choose, if less than 3 then first player, if more then second player
+transform to playfield
+cats poof onto each side bench/playground
+player num and name pop up + " 's turn "
+message: choose a cat, and where to place it
+cat chosen transforms to staring cat,
+message changes to choose location,
+when place chosen
+a vibrating/thumbing green button shows just "confirm"
+then cat poofs disappears, then poof appear in place where player chose
+cats in surronding boxes, diagonal, horizontal and vertical, all start fighting and move to where ever they're supposed to go
+either off board, or one box to next place
+then Player 2 turn etc...
+
+point counters on top left and right, on each side of game's name
+with player 1 name: player 2 name:
+
+
+
+
+
+Design:
+Source for gifs:
+https://tenor.com/view/luoxiaohei-lxh-lollipop-cool-gif-8866213
+
+
+5 pages
+page 1
+first page main page, background plus start button and recent games page button
+page 2
+recent games page
+back button or new game button
+page 3
+data for game
+input for names for players
+//choose colour of cats
+winning points
+number of cats per player
+size of game
+
+page 4 
+game
+each player will have his cat Design
+his points
+number of cats counter
+
+page 5
+endGame 
+replay or go to recent games
+
+
+//regarding the generation of the playfield
+after getting the input:
+
+<div id="container">
+  <div id="gameField">
+    <div id="asdfasd"></div>
+    <div id="asdf"></div>
+    <div id="fff"></div>
+    <div id="sda"></div>
+  </div>
+  <div id="player1Details"></div>
+  <div id="player2Details"></div>
+  <div id="timer"></div>
+  <div id="doneButton"></div>
+  <div id="animation"></div>
+</div>
+inside gamefield div must add div children in the amount of number of cells needed for the gameField
+so if the size is 6x6 then we need 36 children
+of course set their ids to the cell location, will take as convention that its going to be starting from index 0,0
+
+#container {
+  height: 90%; 
+  width: 75%;
+  background-color: #fee89b;
+  margin: 0 auto;
+  border-radius: 10px;
+  border-color: #ffd342;
+  border-style: solid;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  z-index: 999;
+  object-fit: contain;
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "animation timer doneButton"
+    "player1Details gameField gameField"
+    "player2Details gameField gameField";
+}
+
+#gameField {
+  border-top: 3px dashed rgb(177, 143, 30);
+  border-left: 3px dashed rgb(177, 143, 30);
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "asdfasd asdf fff"
+    "sda . ."
+    ". . ."; 
+  grid-area: gameField; 
+}
+
+#asdfasd { grid-area: asdfasd; }
+#asdf { grid-area: asdf; }
+#fff { grid-area: fff; }
+#sda { grid-area: sda; }
+
+#player1Details { grid-area: player1Details; }
+#player2Details { grid-area: player2Details; }
+#timer { grid-area: timer; }
+#doneButton { grid-area: doneButton; }
+#animation { grid-area: animation; }
+
+//
+additionally in the css will generate styles for each cell just naming the grid area with the same name as the id identifying it
+for example:
+#player1Details { grid-area: player1Details; }
+
+/
+will also set its place in the grid template areas property of the gameField style section
+according to the number of columns will also increase the grid template columns field with 1fr for each column
+same for the rows
+
+

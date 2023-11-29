@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harvest Grid Quest</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="left_column">
+      <h1>Harvest Grid Quest</h1>
+      <table>
+        <tbody id="grid-container"></tbody>
+      </table>
+    </div>
+
+    <div id="right_column">
+      <div class="columns">
+        <div id="spring">
+          <h2>Spring</h2>
+          <h2 id="spring_points">0</h2>
+        </div>
+        <div id="summer">
+          <h2>Summer:</h2>
+          <h2 id="summer_points">0</h2>
+        </div>
+        <div id="autumn">
+          <h2>Autumn:</h2>
+          <h2 id="autumn_points">0</h2>
+        </div>
+        <div id="winter">
+          <h2>Winter:</h2>
+          <h2 id="winter_points">0</h2>
+        </div>
+      </div>
+
+      <h2 id="total_points">Total: 0 points</h2>
+
+      <h2 id="current_season"></h2>
+
+      <hr />
+
+      <div class="columns">
+        <div class="mission">
+          <img id="mission_a_image" src="" />
+          <div class="mission_letter">A</div>
+          <div id="mission_a_points" class="mission_points">(2 point)</div>
+          <div id="mission_a_active" class="circle">●</div>
+        </div>
+        <div class="mission">
+          <img id="mission_b_image" src="" />
+          <div class="mission_letter">B</div>
+          <div id="mission_b_points" class="mission_points">(2 point)</div>
+          <div id="mission_b_active" class="circle">●</div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="mission">
+          <img id="mission_c_image" src="" />
+          <div class="mission_letter">C</div>
+          <div id="mission_c_points" class="mission_points">(2 point)</div>
+          <div id="mission_c_active" class="circle">●</div>
+        </div>
+        <div class="mission">
+          <img id="mission_d_image" src="" />
+          <div class="mission_letter">D</div>
+          <div id="mission_d_points" class="mission_points">(2 point)</div>
+          <div id="mission_d_active" class="circle">●</div>
+        </div>
+      </div>
+
+      <h2 id="timer_season"></h2>
+
+      <hr />
+
+      <div class="columns">
+        <div>
+          <h2>Item to be placed:</h2>
+
+          <button id="rotate">Rotate</button>
+          <button id="mirror">Flip</button>
+          <button id="saveButton">Save Progress</button>
+          <button id="resetButton">Reset Progress</button>
+          <button id="loadButton">Load Game</button>
+        </div>
+        <div class="card">
+          <h3 id="element_time"></h3>
+          <table id="element">
+            <tbody id="current-element-container"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
