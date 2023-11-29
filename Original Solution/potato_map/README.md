@@ -12,10 +12,15 @@ HE6U9M Web programming - assessment This solution was submitted and prepared by 
 
 # The basic tasks (12 points)
 [x] Placement: You can place the map element correctly. (2 points) 
+
 [x] Placement: The displayed map element can be rotated, and we can place it this way. (1 point) 
+
 [x] Placement: The displayed map element can be reflected, and we can place it this way. (1 point) 
+
 [x] Quest: the quest "Edge of the Forest" appears and you can calculate your score. (1 point) 
-[x] Quest: the quest "Sleepy Valley" appears and you can calculate your score. (1 point) 
+
+[x] Quest: the quest "Sleepy Valley" appears and you can calculate your score. (1 point)
+
 [x] Mission: the "Potato Watering" mission appears and you can calculate your score. (1 point) 
 [x] Season: The game lasts for 4 seasons, each season lasts for 7 time units, the mission cards belonging to the seasons are highlighted. (1 point) 
 [x] Season: At the end of each season, the end-of-season score is calculated from the corresponding missions, and the game continues to the next season. (1 point) 
