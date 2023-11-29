@@ -1,39 +1,58 @@
-Web Programming - Assessment
-This solution was submitted and created by the above-mentioned student for the assessment of the Web Programming course.
-I declare that this solution is my own work. I did not copy or use solutions from third parties. I did not pass on the solution to my fellow students, nor did I publish it.
-The Student Requirements System of Eötvös Loránd University
-(ELTE's Organizational and Operational Rules, Volume II, Section 74/C.) states that as long as a student presents another student's work - or at least a significant part of it - as their own, it counts as a disciplinary offense.
-The most serious consequence of a disciplinary offense is the expulsion of the student from the university.
+# Javascript-project
+HE6U9M Web programming - assessment This solution was submitted and prepared by the student written above for the assessment of the Web programming course. 
 
-Minimum Requirements (without which we do not accept, 8 points)
-[x] Square Grid: After starting the game, an 11x11 map is drawn with the mountains in the appropriate places. (1 point)
-[x] Placement: One of the map elements randomly appears with its corresponding time units. (1 point)
-[x] Placement: The map element can be placed anywhere on the square grid. (2 points)
-[x] Time: The game lasts for 28 time units, and placing the map elements subtracts the corresponding time units from it. (1 point)
-[x] Mission: can calculate the score for the "Borderlands" mission. (1 point)
-[x] End: At the end of each mission, it writes how many points we got for which mission. (1 point)
-[x] End: At the end of the game, after the 28 time units have elapsed, it calculates the score for the basic "Borderlands" mission and writes how many points we have achieved. (1 point)
+# Must be completed as a minimum (we will not accept it without it, 8 points)
+[x] Square grid: After starting the game, the 11x11 map will be drawn with the mountains in the right place. (1 point) 
 
-Basic Tasks (12 points)
-[x] Placement: Can place the map element correctly. (2 points)
-[x] Placement: The displayed map element can be rotated and thus can be placed. (1 point)
-[x] Placement: The displayed map element can be mirrored and thus can be placed. (1 point)
-[x] Mission: the "Edge of the Forest" mission appears and can calculate its score. (1 point)
-[x] Mission: the "Sleepy Valley" mission appears and can calculate its score. (1 point)
-[x] Mission: the "Potato Irrigation" mission appears and can calculate its score. (1 point)
-[x] Season: The game lasts through 4 seasons, each season lasts 7 time units, mission cards associated with the seasons are highlighted. (1 point)
-[x] Season: At the end of each season, the end-of-season score from the associated missions is calculated, and the game continues to the next season. (1 point)
-[x] Mission: Enclosing the mountains completely can earn 1 extra point, which are added to our score at the end of each season (or the game). (1 point)
-[x] Game Over: At the end of the game, the total score earned during the four seasons appears. (1 point)
-[x] Elegant appearance (1 point)
+[x] Placement: One of the map elements is randomly displayed with the corresponding time units. (1 point) 
 
-Extras (10 points)
-[x] Mission: Alley (1 point)
-[x] Mission: Irrigation Channel (1 point)
-[x] Mission: Rich City (1 point)
-[x] Mission: Valley of Mages (1 point)
-[x] Mission: Vacant Lot (1 point)
-[x] Mission: Terraced House (1 point)
-[x] Mission: Odd Silos (1 point)
-[x] Mission: Rich Countryside (1 point)
-[x] Save: The game continuously saves its state to localStorage. Upon page load, if such a saved state exists, it loads from there, otherwise a new game starts. At the end of the game, the saved state is deleted. (2 points)
+[x] Placement: The map element can be placed on the square grid (anywhere). (2 points) 
+
+[x] Time: The game lasts for 28 time units, and by placing the map elements, you subtract the time unit corresponding to the map element. (1 point) 
+
+[x] Mission: you can calculate the score of the "Frontier Region" mission. (1 point) 
+
+[x] End: For each mission, it lists how many points we received for which mission. (1 point) 
+
+[x] End: At the end of the game, after the 28 time units have passed, the Border Region calculates the score for the basic mission and writes out how many points we have achieved. (1 point)
+
+# The basic tasks (12 points)
+[x] Placement: You can place the map element correctly. (2 points) 
+
+[x] Placement: The displayed map element can be rotated, and we can place it this way. (1 point) 
+
+[x] Placement: The displayed map element can be reflected, and we can place it this way. (1 point) 
+
+[x] Quest: the quest "Edge of the Forest" appears and you can calculate your score. (1 point) 
+
+[x] Quest: the quest "Sleepy Valley" appears and you can calculate your score. (1 point)
+
+[x] Mission: the "Potato Watering" mission appears and you can calculate your score. (1 point) 
+
+[x] Season: The game lasts for 4 seasons, each season lasts for 7 time units, the mission cards belonging to the seasons are highlighted. (1 point) 
+
+[x] Season: At the end of each season, the end-of-season score is calculated from the corresponding missions, and the game continues to the next season. (1 point) 
+
+[x] Mission: By completely encircling the mountains, you can get 1 extra point, which will be added to our score at the end of each season (or the game) (1 point) 
+
+[x] End of the game: At the end of the game, the total score obtained during the four seasons will be displayed (1 point) 
+[x] Demanding appearance (1 point)
+
+# Extras (10 points)
+[x] Quest: Fasor (1 point) 
+
+[x] Quest: Irrigation Channel (1 point) 
+
+[x] Quest: Rich City (1 point) 
+
+[x] Quest: Mage Valley (1 point) 
+
+[x] Quest: Empty Lot (1 point) 
+
+[x] Quest: Townhouse (1 point) 
+
+[x] Quest: Odd Silos (1 point) 
+
+[x] Quest: Rich Country (1 point) 
+
+[x] Save: The game will continuously save its state to localStorage. When loading a page, if there is such a saved state here, it loads from there, otherwise a new game starts. At the end of the game, the saved state is deleted. (2 points)
