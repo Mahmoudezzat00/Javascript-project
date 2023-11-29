@@ -1,5 +1,5 @@
 # Javascript-project
-HE6U9M Web programming - assessment This solution was submitted and prepared by the student written above for the assessment of the Web programming course. I declare that this solution is my own work. I have not copied or used third party solutions. I did not forward a solution to my fellow students, nor did I publish it. The Student Requirements System of the Eötvös Loránd University (ELTE organizational and operating regulations, Volume II, § 74/C) states that as long as a student presents the work of another student - or at least a significant part of it - as his own work, it is a disciplinary offense it matters The most serious consequence of a disciplinary offense is the dismissal of the student from the university.
+HE6U9M Web programming - assessment This solution was submitted and prepared by the student written above for the assessment of the Web programming course. 
 
 # Must be completed as a minimum (we will not accept it without it, 8 points)
 [x] Square grid: After starting the game, the 11x11 map will be drawn with the mountains in the right place. (1 point) 
@@ -31,4 +31,5 @@ HE6U9M Web programming - assessment This solution was submitted and prepared by 
 [x] Quest: Empty Lot (1 point) 
 [x] Quest: Townhouse (1 point) 
 [x] Quest: Odd Silos (1 point) 
-[x] Quest: Rich Country (1 point) [ ] Save: The game will continuously save its state to localStorage. When loading a page, if there is such a saved state here, it loads from there, otherwise a new game starts. At the end of the game, the saved state is deleted. (2 points)
+[x] Quest: Rich Country (1 point) 
+[ ] Save: The game will continuously save its state to localStorage. When loading a page, if there is such a saved state here, it loads from there, otherwise a new game starts. At the end of the game, the saved state is deleted. (2 points)
